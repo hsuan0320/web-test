@@ -1,0 +1,23 @@
+.btn{
+    display: inline-block;
+    padding: 12px 25px;
+    border: 2px solid $color_accent;
+    background-color: $color_accent;
+    color: $color_white;
+    text-decoration: none;
+    transition: all 400ms;
+    &:hover,
+    &:active{
+        background-color: darken($color_accent, 10);
+    }
+    &--border{
+        border: 2px solid $color_accent;
+        background-color:$color_white;
+        color: $color_accent;
+        &:hover,
+        &:active{
+            background-color:  $color_accent;
+            color: $color_white;
+        }
+    }
+}

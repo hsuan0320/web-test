@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>網頁切版練習</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar_container">
+        <a href="#">
+          <img src="assets/images/logo.svg" alt="LOGO" />
+        </a>
+        <ul class="navbar_links">
+          <li><a href="#">關於我們</a></li>
+          <li><a href="#">活動項目</a></li>
+          <li><a href="#">相關影片</a></li>
+          <li><a class="navbar_btn" href="#">註冊 / 登入</a></li>
+        </ul>
+        <span class="navbar_menu icon-menu"></span>
+      </div>
+    </nav>
+    <header class="header">
+      <div class="header_container">
+        <img src="assets/images/header-logo.svg" alt="首頁的封面標誌圖片" />
+        <h1>城市雲交通網路 <br />Urban Traffic Network</h1>
+      </div>
+    </header>
+    <main class="main">
+      <section>
+        <div class="main_container">
+          <div class="row">
+            <aside class="col">
+              <h2 class="text-accent">
+                城市雲交通網路<br />Urban Traffic Network
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus incidunt aut sit corrupti porro eveniet maiores,
+                totam qui consequatur? Reiciendis hic incidunt doloribus
+                architecto aspernatur unde saepe porro esse rem.
+              </p>
+              <ol class="main_btns">
+                <li>
+                  <a href="#" class="btn">了解更多</a>
+                </li>
+                <li>
+                  <a href="#" class="btn btn--border">了解更多</a>
+                </li>
+              </ol>
+            </aside>
+            <figure class="col">
+              <img class="img-full" src="assets/images/car_01.jpg" alt="車" />
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="main_cloud-top-bg">
+        <div class="main_container">
+          <h2 class="text-center">
+            城市雲交通網路<br />
+            Urban Traffic Network
+          </h2>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">著作權相關資訊</footer>
+    <script>
+      // 變數為一個暫存區
+      // 常數建立以後不可變動
+      const linksElement = document.querySelector('.navbar_links');
+      const menuTrigger = document.querySelector('.navbar_menu');
+      // console.log(linksElement, menuTrigger);
+
+      menuTrigger.addEventListener('click', function () {
+        // console.log('clicked');
+        linksElement.classList.toggle('active');
+      });
+    </script>
+  </body>
+</html>

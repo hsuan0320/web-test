@@ -1,0 +1,11 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+    .col{
+        display: inline-flex;
+        flex-direction: column;
+        flex:1 260px;
+        margin: 10px;
+    }
+}

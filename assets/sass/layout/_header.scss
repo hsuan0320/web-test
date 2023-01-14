@@ -1,0 +1,57 @@
+//遮罩方法1 : 使用偽元素去定位
+.header{
+    padding: 40px;
+    min-height: 100vh;
+    position: relative;
+    background-image: url('../images/header-cover.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: $color_white;
+    text-align: center;
+
+    @extend %flex-center;
+    &::before,&::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+    };
+    &::before{
+        top: 0;
+        height: 100%;
+        // background-color: $color_accent;
+        background-image: linear-gradient(
+            to right bottom,
+            $color_accent,
+            $color_auxiliary
+        );
+        opacity: 0.7;
+    };
+    &::after{
+        bottom: 0;
+        height: 120px;
+        background-image: url('../images/cloud-mask.svg');
+        background-size: cover;
+        background-position: center top;
+    }
+    &_container{
+        position: relative;
+        letter-spacing: 5px;
+    }
+}
+
+//遮罩方法2 :
+// .header{
+//     background-image: url('../images/header-cover.jpg');
+//     background-size: cover;
+//     color: $color_white;
+//     text-align: center;
+
+//     &_container{
+//         flex-direction: column;
+//         padding: 40px;
+//         min-height: 100vh;
+//         background-color: rgba($color: $color_accent, $alpha: 0.7);
+//         @extend %flex-center;
+//     }
+// }
